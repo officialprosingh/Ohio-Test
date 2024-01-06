@@ -1,0 +1,627 @@
+/* screen - dashboard */
+
+.dashboard {
+    align-items: flex-start;
+    background-color: #f4f4f4;
+    border: 1px none;
+    display: flex;
+    gap: 71px;
+    overflow: hidden;
+    width: 1440px;
+}
+
+.dashboard .sidebar {
+    align-items: flex-start;
+    display: flex;
+    margin-left: -17px;
+    min-width: 316px;
+    height: 900px;
+}
+
+.dashboard .overlap-group1 {
+    height: 1024px;
+    position: relative;
+    width: 314px;
+}
+
+.dashboard .background {
+    background-color: #fafafa;
+    height: 1024px;
+    left: 17px;
+    position: absolute;
+    top: 0;
+    width: 297px;
+}
+
+.dashboard .settings {
+    align-items: center;
+    display: flex;
+    gap: 1084px;
+    height: 31px;
+    justify-content: flex-end;
+    left: 75px;
+    min-width: 103px;
+    position: absolute;
+    top: 945px;
+}
+
+.dashboard .log-out {
+    letter-spacing: 0.32px;
+    line-height: normal;
+    min-height: 19px;
+    min-width: 60px;
+    white-space: nowrap;
+}
+
+.dashboard .logout-rounded-left {
+    align-self: flex-end;
+    height: 31px;
+    margin-bottom: -456px;
+    width: 28px;
+}
+
+.dashboard .help {
+    align-items: center;
+    display: flex;
+    gap: 1083px;
+    height: 24px;
+    justify-content: flex-end;
+    left: 77px;
+    min-width: 104px;
+    position: absolute;
+    top: 906px;
+}
+
+.dashboard .get-help {
+    letter-spacing: 0.32px;
+    line-height: normal;
+    margin-bottom: 1.0px;
+    min-height: 19px;
+    min-width: 63px;
+    white-space: nowrap;
+}
+
+.dashboard .interrogation-1 {
+    align-self: flex-end;
+    height: 24px;
+    margin-bottom: -456px;
+    width: 24px;
+}
+
+.dashboard .separator {
+    height: 1px;
+    left: 77px;
+    object-fit: cover;
+    position: absolute;
+    top: 858px;
+    width: 187px;
+}
+
+.dashboard .dossier {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    left: 67px;
+    min-height: 113px;
+    position: absolute;
+    top: 612px;
+    width: 130px;
+}
+
+.dashboard .flex-row {
+    align-items: center;
+    display: flex;
+    gap: 18px;
+    min-width: 128px;
+}
+
+.dashboard .user {
+    height: 41px;
+    width: 30px;
+}
+
+.dashboard .dossier-1 {
+    letter-spacing: 0.32px;
+    line-height: normal;
+    margin-top: 2.0px;
+    min-height: 19px;
+    white-space: nowrap;
+    width: 80px;
+}
+
+.dashboard .book {
+    height: 43px;
+    width: 29px;
+}
+
+.dashboard .handbook {
+    left: 115px;
+    letter-spacing: 0.32px;
+    line-height: normal;
+    position: absolute;
+    top: 694px;
+    white-space: nowrap;
+    width: 80px;
+}
+
+.dashboard .logbook {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    height: 48px;
+    left: 64px;
+    min-width: 133px;
+    position: absolute;
+    top: 500px;
+}
+
+.dashboard .logbook-1 {
+    height: 48px;
+    width: 36px;
+}
+
+.dashboard .logbook-2 {
+    letter-spacing: 0.32px;
+    line-height: normal;
+    margin-top: 1.0px;
+    min-height: 19px;
+    white-space: nowrap;
+    width: 80px;
+}
+
+.dashboard .userbook {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    height: 48px;
+    left: 64px;
+    min-width: 133px;
+    position: absolute;
+    top: 560px;
+}
+
+.dashboard .userbook-1 {
+    height: 48px;
+    width: 36px;
+}
+
+.dashboard .userbook-2 {
+    letter-spacing: 0.32px;
+    line-height: normal;
+    margin-top: 1.0px;
+    min-height: 19px;
+    white-space: nowrap;
+    width: 80px;
+}
+
+
+
+.dashboard .map {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    height: 48px;
+    left: 64px;
+    min-width: 133px;
+    position: absolute;
+    top: 438px;
+}
+
+.dashboard .map-1 {
+    height: 48px;
+    width: 36px;
+}
+
+.dashboard .map-2 {
+    letter-spacing: 0.32px;
+    line-height: normal;
+    margin-top: 1.0px;
+    min-height: 19px;
+    white-space: nowrap;
+    width: 80px;
+}
+
+.dashboard .revenues {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    height: 44px;
+    left: 62px;
+    min-width: 136px;
+    position: absolute;
+    top: 375px;
+}
+
+.dashboard .heart-with-pulse {
+    height: 44px;
+    width: 38px;
+}
+
+.dashboard .health {
+    letter-spacing: 0.32px;
+    line-height: normal;
+    margin-bottom: 5.0px;
+    min-height: 19px;
+    white-space: nowrap;
+    width: 80px;
+}
+
+.dashboard .backpack {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    height: 45px;
+    left: 59px;
+    min-width: 138px;
+    position: absolute;
+    top: 305px;
+}
+
+.dashboard .backpack-1 {
+    height: 45px;
+    width: 40px;
+}
+
+.dashboard .backpack-2 {
+    letter-spacing: 0.32px;
+    line-height: normal;
+    margin-bottom: 2.0px;
+    min-height: 19px;
+    white-space: nowrap;
+    width: 80px;
+}
+
+.dashboard .overlap-group {
+    height: 70px;
+    left: 0;
+    position: absolute;
+    top: 220px;
+    width: 314px;
+}
+
+.dashboard .rectangle-3 {
+    background-color: #f4f4f4;
+    height: 70px;
+    left: 17px;
+    position: absolute;
+    top: 0;
+    width: 297px;
+}
+
+.dashboard .place {
+    left: 115px;
+    letter-spacing: 0.32px;
+    line-height: normal;
+    position: absolute;
+    top: 26px;
+    white-space: nowrap;
+    width: 80px;
+}
+
+.dashboard .rectangle-4 {
+    box-shadow: 0px 0px 10px -3px #e07a5f;
+    height: 24px;
+    left: 5px;
+    position: absolute;
+    top: 24px;
+    transform: rotate(45.00deg);
+    width: 24px;
+}
+
+.dashboard .home {
+    height: 36px;
+    left: 57px;
+    position: absolute;
+    top: 21px;
+    width: 43px;
+}
+
+.dashboard .hunting-permit-day-0-of-6 {
+    color: transparent;
+    font-weight: 400;
+    left: 66px;
+    letter-spacing: 0.40px;
+    line-height: normal;
+    position: absolute;
+    text-shadow: 0px 0px 10px #81b29a4c;
+    top: 120px;
+}
+
+
+
+.dashboard .span1 {
+
+    letter-spacing: 0.56px;
+}
+
+.dashboard .logo {
+    align-items: flex-start;
+    display: flex;
+    gap: 11px;
+    height: 47px;
+    left: 38px;
+    min-width: 220px;
+    position: absolute;
+    top: 30px;
+}
+
+.dashboard .x03f86bb61da4e768d217ee25d188061e-1 {
+    height: 47px;
+    object-fit: cover;
+    width: 66px;
+}
+
+.dashboard .centauri-sim-by-ohio-university {
+
+    font-weight: 600;
+    letter-spacing: 0.48px;
+    line-height: normal;
+    min-height: 41px;
+    text-shadow: 0px 0px 50px #00000040;
+}
+
+.dashboard .span1-1 {
+    letter-spacing: 0.24px;
+}
+
+.dashboard .line {
+    height: 900px;
+    left: 314px;
+    position: absolute;
+    top: 0;
+    width: 1px;
+}
+
+.dashboard .dashboard-1 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-top: 29px;
+    width: 1011px;
+}
+
+.dashboard .flex-row-1 {
+    align-items: flex-start;
+    display: flex;
+    gap: 681px;
+    height: 179px;
+    margin-top: -25px;
+    min-width: 1018px;
+}
+
+.dashboard .flex-col {
+    align-items: flex-start;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 143px;
+    width: 214px;
+}
+
+.dashboard .title {
+    color: transparent;
+
+    font-weight: 700;
+    letter-spacing: 0.72px;
+    line-height: normal;
+    min-height: 43px;
+    text-shadow: 0px 0px 10px #81b29a4c;
+    white-space: nowrap;
+}
+
+.dashboard .span-2 {
+}
+
+.dashboard .goals {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    min-height: 60px;
+    width: 154px;
+}
+
+.dashboard .current-health {
+
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    min-height: 26px;
+    white-space: nowrap;
+}
+
+.dashboard .x51-of-100 {
+    color: transparent;
+
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    min-height: 34px;
+}
+
+.dashboard .span0 {
+}
+
+.dashboard .span-3 {
+
+}
+
+.dashboard .ellipse-2 {
+    height: 143px;
+    object-fit: cover;
+    width: 123px;
+}
+
+.dashboard .vimeo-player {
+    align-items: flex-start;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 393px;
+    min-height: 415px;
+    padding: 10px;
+    width: 760px;
+    margin-top: 50px;
+}
+
+.dashboard .button {
+    align-self: flex-end;
+    border-radius: 4px;
+    height: 36px;
+    margin-right: 11px;
+    margin-top: 14px;
+    min-width: 36px;
+    padding: 0 2px;
+}
+
+.dashboard .assets-vimeo-icons-watch {
+    align-items: center;
+    display: flex;
+    height: 32px;
+    padding: 0 4px;
+    width: 32px;
+}
+
+.dashboard .overlap-group-1 {
+    align-items: flex-start;
+    background-size: 100% 100%;
+    display: flex;
+    height: 24px;
+    justify-content: flex-end;
+    min-width: 24px;
+    padding: 3px 5.6px;
+}
+
+.dashboard .union {
+    height: 15px;
+    width: 8px;
+}
+
+.dashboard .flex-row-2 {
+    align-items: flex-end;
+    display: flex;
+    gap: 11px;
+    min-width: 967px;
+}
+
+.dashboard .button-1 {
+    border-radius: 4px;
+    height: 40px;
+    min-width: 64px;
+    padding: 0 16px;
+}
+
+.dashboard .assets-vimeo-icons-play {
+    height: 32px;
+    width: 32px;
+}
+
+.dashboard .bar {
+    align-items: center;
+    border-radius: 2px;
+    display: flex;
+    height: 32px;
+    justify-content: flex-end;
+    min-width: 892px;
+    padding: 0 10px;
+}
+
+.dashboard .seek {
+    border: 1px solid;
+    border-color: #666666;
+    height: 12px;
+    width: 722px;
+}
+
+.dashboard .assets-vimeo-icons-volume {
+    align-items: flex-end;
+    display: flex;
+    height: 24px;
+    margin-left: 10px;
+    padding: 6.0px 1.5px;
+    width: 24px;
+}
+
+.dashboard .voluem {
+    height: 10px;
+    width: 21px;
+}
+
+.dashboard .assets-vimeo-icons-settings {
+    height: 24px;
+    margin-left: 4px;
+    width: 24px;
+}
+
+.dashboard .assets-vimeo-icons-fullscreen {
+    align-items: flex-start;
+    display: flex;
+    height: 24px;
+    margin-left: 4px;
+    padding: 4.5px 4.5px;
+    width: 24px;
+}
+
+.dashboard .union-1 {
+    height: 15px;
+    width: 15px;
+}
+
+.dashboard .assets-vimeo-logo-wordmark {
+    align-items: flex-start;
+    display: flex;
+    height: 18px;
+    margin-left: 8px;
+    padding: 1.5px 0;
+    width: 48px;
+}
+
+.dashboard .union-2 {
+    height: 14px;
+    width: 48px;
+}
+
+.dashboard .button-2 {
+    align-self: flex-end;
+    box-shadow: 0px 6px 10px #00000026;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 23px;
+    position: relative;
+    width: 200px;
+}
+
+.dashboard .button-src-large {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    gap: 6px;
+    height: 48px;
+    justify-content: center;
+    padding: 0px 16px;
+    position: relative;
+}
+
+.dashboard .click-me {
+
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 18px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.dashboard .icon-chevron-forward {
+    height: 14px;
+    min-width: 14px;
+    position: relative;
+}
+
+.dashboard .button-3 {
+    align-items: center;
+    display: flex;
+}
