@@ -5,7 +5,7 @@ const Footer = () =>{
 
     return(
 
-        <div class="ui inverted vertical footer segment" style={{ marginTop:"650px"}}>
+        <div class="ui inverted vertical footer segment" style={{ marginTop:"350px"}}>
             <div class="ui center aligned container">
                 <img src={logo} class="ui centered mini image" style={{width:"150px"}} />
                     <div class="ui horizontal inverted small divided link list">
