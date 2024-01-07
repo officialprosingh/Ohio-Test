@@ -1,5 +1,8 @@
-import React from "react";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import logo from "../images/logo.png";
+import { supabase } from "../supabaseClient"; // Adjust the path as necessary
+
 
 const Header = () =>{
     return (

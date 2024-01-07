@@ -1,8 +1,24 @@
-import React from "react";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import logo from "../images/logo.png";
+import { supabase } from "../supabaseClient";
 
 
 const MainHeader = () =>{
+
+
+    const navigate = useNavigate();
+
+    const handleSignOut = async () => {
+        await supabase.auth.signOut();
+        navigate('/login');
+    };
+
+    // Optional: Check if the user is logged in
+  ///  const user = supabase.auth.user();
+
+
+
     return (
         <div class="ui fixed inverted menu" >
             <div className="ui container">
@@ -14,7 +30,7 @@ const MainHeader = () =>{
                 <a href="#" className="item">Contact Us</a>
 
                 <div className="right item">
-                    <a className="ui inverted button" style={{marginRight: "15px", marginLeft: "50px"}} href="/">Sign Out</a>
+                    <a className="ui inverted button" style={{marginRight: "15px", marginLeft: "50px"}} onClick={handleSignOut} >Sign Out</a>
                 </div>
 
             </div>

@@ -1,17 +1,34 @@
-import React from "react";
-import Home from "../images/home-icon.png"
-import Backpack from "../images/backpack@2x.png"
-import Health from "../images/heart-with-pulse@2x.png"
-import Map from "../images/map@2x.png"
-import Dossier from "../images/user@2x.png"
-import logo from "../images/logo.png";
+import React, { useEffect, useState } from "react";
 import Bio from "../images/bio.png"
-import IntroVideo from "../images/intro-video.png"
-
+import { supabase } from "../supabaseClient"; // Adjust the path as necessary
 
 
 
 function Dashboard () {
+    const [userData, setUserData] = useState({ stage: '', name: '', health: '' });
+
+    useEffect(() => {
+        const user = supabase.auth.user();
+
+        if (user) {
+            const fetchUserData = async () => {
+                const { data, error } = await supabase
+                    .from('Game') // Adjust to your table name
+                    .select('stage, name, health')
+                    .eq('id', user.id)
+                    .single();
+
+                if (error) {
+                    console.error('Error fetching profile:', error);
+                } else {
+                    setUserData(data);
+                }
+            };
+
+            fetchUserData();
+        }
+    }, []);
+
 
 
     return (
@@ -30,16 +47,19 @@ function Dashboard () {
 
                 <div className="twelve wide stretched column">
                     <div className="ui segment">
-                        <h2 class="ui right floated header" style={{marginTop: "25px"}}>Hi Biologist!</h2>
+                        <h2 className="ui right floated header" style={{marginTop: "25px"}}>
+                            Hi {userData.name || 'Biologist'}!
+                        </h2>
+
                         <img className="ui left floated header" src={Bio} style={{width: "80px"}}/>
                         <div className="ui clearing divider"></div>
 
                         <h4 className="ui right floated header">out of 100%</h4>
-                        <h4 className="ui right floated header">51%</h4>
-                        <h4 className="ui right floated header">Current Health:</h4>
+                        <h4 className="ui right floated header">{userData.health}%</h4>                        <h4
+                        className="ui right floated header">Current Health:</h4>
 
                         <h4 className="ui left floated header">Hunting Permit Day:</h4>
-                        <h4 className="ui left floated header">0</h4>
+                        <h4 className="ui left floated header">{userData.stage}</h4>
 
                         <div className="ui clearing divider"></div>
 
