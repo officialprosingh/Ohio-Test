@@ -8,7 +8,7 @@ function Dashboard () {
     const [userData, setUserData] = useState({ stage: '', name: '', health: '' });
 
     useEffect(() => {
-        const user = supabase.auth.user();
+        const user = supabase.auth.getUser();
 
         if (user) {
             const fetchUserData = async () => {

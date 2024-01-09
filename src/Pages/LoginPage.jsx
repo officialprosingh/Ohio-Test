@@ -1,11 +1,10 @@
-import "../Css/Login.css"
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import LoginBg from "../images/LoginBgImage.png"
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../Css/Login.css";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import LoginBg from "../images/LoginBgImage.png";
 import { supabase } from "../supabaseClient";
-import {useEffect} from "react"; // Adjust the path as necessary
 
 
 
@@ -17,17 +16,21 @@ function LoginPage(){
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        const { user, error } = await supabase.auth.signInWithPassword({
-            email: email,
-            password: password,
-        });
+        try {
+            
+            const { data, error } = await supabase.auth.signInWithPassword({
+                email: email,
+                password: password,
+            });
 
-
-        supabase.auth.onAuthStateChange((event, session) => {
-            if (event === 'SIGNED_IN') console.log('SIGNED_IN', session)
-            navigate('/home');
-
-        })
+            if (error) throw error;
+            console.log(data);
+            alert("Login Successfull")
+            navigate("/home");
+        }
+        catch (error) {
+            alert(error.error_description || error.message)
+        }
 
     };
 
