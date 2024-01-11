@@ -4,6 +4,7 @@ import App from './components/App';
 import LoginPage from "./Pages/LoginPage";
 import SignupPage from "./Pages/SignupPage";
 import HomePage from "./Pages/MainPage";
+import Awakening from "./Stage0/Awakening"
 import {
     createBrowserRouter,
     RouterProvider,
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         path: "home",
         element: <HomePage/>,
     },
+    {
+        path: "awakening",
+        element: <Awakening/>,
+    }
 ]);
 
 
