@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from "react";
-import Bio from "../images/bio.png"
+import Bio from "../images/bio.png";
 import { supabase } from "../supabaseClient"; // Adjust the path as necessary
 
 
 
 function Dashboard () {
     const [userData, setUserData] = useState({ stage: '', name: '', health: '' });
-    const [userId, setUserId] = useState(null);
-    const [emailId, setEmailId] = useState(null);
-
+    const [emailId, setEmailId] = useState('');
     const getUser = async () => {
         const user = await supabase.auth.getUser();
+        const emailid = user.data.user?.email;
         const { data, error } = await supabase.auth.getSession()
-        console.log(user)
+        console.log(data);
         if (user) {
 
-            let userid = user.data.user?.id
-            let emailid = user.data.user?.email
-            setUserId(userid)
-            setEmailId(emailid)
-            console.log(emailId)
+            const userid = user.data.user?.id;
+            setEmailId(emailid);
+            if(emailId === ""){
+                console.log("email is null");
+            }
         }
     };
 
@@ -32,21 +31,28 @@ function Dashboard () {
 
         if (data) {
             setUserData({ stage: data.stage, name: data.name, health: data.health});
-            console.log(data)
+            console.log(data);
         }
         else{
-            console.log(error)
+            console.log(error);
         }
     }
 
     useEffect(() => {
         try {
             getUser();
-            getUserData();
         } catch (error) {
             console.log(error);
         }
     }, []);
+
+    useEffect(() => {
+        try {
+            if(emailId !== '') getUserData();
+        } catch (error) {
+            console.log(error);
+        }
+    }, [emailId]);
 
 
 
