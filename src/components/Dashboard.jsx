@@ -6,26 +6,45 @@ import { supabase } from "../supabaseClient"; // Adjust the path as necessary
 
 function Dashboard () {
     const [userData, setUserData] = useState({ stage: '', name: '', health: '' });
+    const [userId, setUserId] = useState(null);
+    const [emailId, setEmailId] = useState(null);
+
+    const getUser = async () => {
+        const user = await supabase.auth.getUser();
+        const { data, error } = await supabase.auth.getSession()
+        console.log(user)
+        if (user) {
+
+            let userid = user.data.user?.id
+            let emailid = user.data.user?.email
+            setUserId(userid)
+            setEmailId(emailid)
+            console.log(emailId)
+        }
+    };
+
+    const getUserData = async () => {
+        const { data, error } = await supabase
+            .from('Game')
+            .select('*')
+            .eq('email', emailId)
+            .single();
+
+        if (data) {
+            setUserData({ stage: data.stage, name: data.name, health: data.health});
+            console.log(data)
+        }
+        else{
+            console.log(error)
+        }
+    }
 
     useEffect(() => {
-        const user = supabase.auth.getUser();
-
-        if (user) {
-            const fetchUserData = async () => {
-                const { data, error } = await supabase
-                    .from('Game') // Adjust to your table name
-                    .select('stage, name, health')
-                    .eq('id', user.id)
-                    .single();
-
-                if (error) {
-                    console.error('Error fetching profile:', error);
-                } else {
-                    setUserData(data);
-                }
-            };
-
-            fetchUserData();
+        try {
+            getUser();
+            getUserData();
+        } catch (error) {
+            console.log(error);
         }
     }, []);
 
