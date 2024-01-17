@@ -56,6 +56,25 @@ function Awakening (){
         }
     }, [emailId]);
 
+    const handleSubmit = async (e) => {
+
+        const { data, error } = await supabase.from("Game").insert([
+            {
+              page: "2",
+            },
+          ]);
+          if (error) {
+            console.log("database error!" + error);
+          } else {
+            console.log("success!" + data);
+            navigate("/message-awakening"); // Navigate to the awake page
+          }
+
+        
+
+
+    }
+
     return(
 
         < div>
@@ -107,11 +126,9 @@ function Awakening (){
 
                             <div className="ui clearing divider"></div>
 
-                            <button className="ui blue right floated button">
+                            <button className="ui blue right floated button" onSubmit={handleSubmit}>
 
-                                <a href="/awakening" style={{color: "White"}}>
                                     Next
-                                </a>
                             </button>
 
 

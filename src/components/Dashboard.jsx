@@ -65,7 +65,7 @@ function Dashboard () {
             console.log("database error!" + error);
           } else {
             console.log("success!" + data);
-            navigate("/awakening"); // Navigate to the login page
+            navigate("/awakening"); // Navigate to the awake page
           }
 
         

@@ -4,13 +4,16 @@ import App from './components/App';
 import LoginPage from "./Pages/LoginPage";
 import SignupPage from "./Pages/SignupPage";
 import HomePage from "./Pages/MainPage";
-import Awakening from "./Stage0/Awakening"
+import Awakening from "./Stage0/Awakening";
+import MessageAwakening from './stage0/MessageAwakening';
+
 import {
     createBrowserRouter,
     RouterProvider,
     Route,
     Link,
 } from "react-router-dom";
+import MessageAwakening from './stage0/MessageAwakening';
 
 
 const router = createBrowserRouter([
@@ -33,7 +36,12 @@ const router = createBrowserRouter([
     {
         path: "awakening",
         element: <Awakening/>,
+    },
+    {
+        path: "messageawakening",
+        element: <MessageAwakening/>,
     }
+    
 ]);
 
 
