@@ -54,6 +54,25 @@ function Dashboard () {
         }
     }, [emailId]);
 
+    const handleSubmit = async (e) => {
+
+        const { data, error } = await supabase.from("Game").insert([
+            {
+              page: "1",
+            },
+          ]);
+          if (error) {
+            console.log("database error!" + error);
+          } else {
+            console.log("success!" + data);
+            navigate("/awakening"); // Navigate to the login page
+          }
+
+        
+
+
+    }
+
 
 
     return (
@@ -105,11 +124,8 @@ function Dashboard () {
 
                     <div className="ui clearing divider"></div>
 
-                    <button className="ui blue right floated button">
-
-                        <a href="/awakening" style={{ color:"White"}} >
+                    <button className="ui blue right floated button" onSubmit={handleSubmit}>
                             Next
-                        </a>
                     </button>
 
 
