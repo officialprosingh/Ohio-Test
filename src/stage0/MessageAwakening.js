@@ -61,7 +61,7 @@ function MessageAwakening (){
 
         const { data, error } = await supabase.from("Game").insert([
             {
-              page: "1",
+              page: "2",
             },
           ]);
           if (error) {
