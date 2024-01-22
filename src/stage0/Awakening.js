@@ -3,9 +3,11 @@ import Header from "../components/MainHeader"
 import Footer from "../components/Footer"
 import Bio from "../images/bio.png";
 import { supabase } from "../supabaseClient"; // Adjust the path as necessary
+import { useNavigate } from "react-router-dom";
 
 
 function Awakening (){
+    const navigate = useNavigate();
 
     const [userData, setUserData] = useState({ stage: '', name: '', health: '' });
     const [emailId, setEmailId] = useState('');

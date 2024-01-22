@@ -4,7 +4,7 @@ import App from './components/App';
 import LoginPage from "./Pages/LoginPage";
 import SignupPage from "./Pages/SignupPage";
 import HomePage from "./Pages/MainPage";
-import Awakening from "./Stage0/Awakening";
+import Awakening from "./stage0/Awakening";
 import MessageAwakening from './stage0/MessageAwakening';
 
 import {
@@ -13,7 +13,6 @@ import {
     Route,
     Link,
 } from "react-router-dom";
-import MessageAwakening from './stage0/MessageAwakening';
 
 
 const router = createBrowserRouter([

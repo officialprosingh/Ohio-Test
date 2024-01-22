@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Bio from "../images/bio.png";
 import { supabase } from "../supabaseClient"; // Adjust the path as necessary
 
@@ -7,6 +8,8 @@ import { supabase } from "../supabaseClient"; // Adjust the path as necessary
 function Dashboard () {
     const [userData, setUserData] = useState({ stage: '', name: '', health: '' });
     const [emailId, setEmailId] = useState('');
+    const navigate = useNavigate();
+
     const getUser = async () => {
         const user = await supabase.auth.getUser();
         const emailid = user.data.user?.email;
