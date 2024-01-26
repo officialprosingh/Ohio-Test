@@ -45,7 +45,6 @@ function SignupPage() {
             world: formData.world,
             health: formData.health,
             stage: formData.stage,
-            page: "0",
           },
         ]);
         if (error) {
